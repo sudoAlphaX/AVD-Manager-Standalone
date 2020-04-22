@@ -5,10 +5,17 @@ This Project uses a simple Powershell Script execute a few commands that runs AV
 
 There are a few things need to be done to get your AVD up and Running
 
-Step 1: Find the location of the emulator.exe file. This is usually located in Android Studio SDK Directory. To find the SDK Directory:
+ Find the location of the emulator.exe file. This is usually located in Android Studio SDK Directory. To find the SDK Directory:
 
-	Step 1: Open Android Studio
-	Step 2: Click "File"
-	Step 3: Expand "Appearance and Behaviour". Expand "System Settings" on the drop-Down list.
-	Step 4: Click "Android SDK"
-	Step 5: On the top, you can find the Android SDK Directory from the text box of "Android SDK Location". Note that location.
+	Open Android Studio
+	Click "File"
+	Expand "Appearance and Behaviour". Expand "System Settings" on the drop-Down list.
+	Click "Android SDK"
+	On the top, you can find the Android SDK Directory from the text box of "Android SDK Location". Note that location.
+
+Now execute the Program.
+
+Provide the Location of the emulator.exe file in the Open File Dialog Box.
+
+Re-run the program.
+You can now easily launch any AVD by selecting the number.
