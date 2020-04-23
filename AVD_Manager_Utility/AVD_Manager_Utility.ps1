@@ -2,6 +2,8 @@
 
 #>
 
+$ErrorActionPreference = "stop"
+
 Write-Host "`n          AVD Manager Utility"    `n -ForegroundColor Green   #Introduction
 
 Add-Type -AssemblyName System.Windows.Forms #File selector dialog box initialisation
@@ -23,7 +25,7 @@ if (Test-Path $myLocation\avd.path) {
 
     $deviceList = Invoke-Expression ($emulatorPath + " -list-avds") #Fetch the AVD list and save it in variable $deviceList. Example Path of emulator.exe -> C:\SomeRandomFolder\SDK\emulator\emulator.exe
 
-    $i = 0; $deviceList | ForEach-Object { Write-Host `n($i + 1) "->" $deviceList[$i]; $i++ }; #Count the devices and display it line by line as numbered list
+    $i = 0; $deviceList | %{Write-Host `n($i+1) "->" $deviceList[$i]; $i++}; #Count the devices and display it line by line as numbered list
     Write-Host `n($i + 1) "-> Change AVD Path" #Settings
 
     $deviceID = Read-Host `n "Enter the Key of the AVD to be deployed"
