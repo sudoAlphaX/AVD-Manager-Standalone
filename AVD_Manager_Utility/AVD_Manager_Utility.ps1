@@ -28,7 +28,7 @@ if (Test-Path $myLocation\avd.path) {
     $i = 0; $deviceList | %{Write-Host `n($i+1) "->" $deviceList[$i]; $i++}; #Count the devices and display it line by line as numbered list
     Write-Host `n($i + 1) "-> Change AVD Path" #Settings
 
-    $deviceID = Read-Host `n "Enter the Key of the AVD to be deployed"
+    $deviceID = Read-Host `n "Enter the Key of the AVD to be Started"
 
 
     if ($deviceID -eq $i + 1) {
@@ -45,12 +45,13 @@ if (Test-Path $myLocation\avd.path) {
 
     else {
 
-      Write-Host "`n Deploying AVD:"$deviceList[$deviceID - 1] -BackgroundColor Green -ForegroundColor Black #Give some information of the AVD being deployed
+      Write-Host "`n Starting AVD:"$deviceList[$deviceID - 1] -BackgroundColor Green -ForegroundColor Black #Give some information of the AVD being Started
       pause #Wait until user clicks ENTER
       $device = $deviceList[$deviceID - 1]
-      $deploy = "$emulatorPath -avd $device"
-      #Invoke-Expression $deploy | out-null #Deploy the AVD   
-    }
+      $Start = "$emulatorPath -avd $device"
+      #Invoke-Expression $Start | out-null #Start the AVD
+      
+          }
   }    
 
   else {
