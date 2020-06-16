@@ -1,5 +1,5 @@
 # AVD-Manager-Standalone
-Allows users to run their AVDs (Android Virtual Devices) without opening Android Studio
+Allows users to run their AVDs (Android Virtual Devices) without opening Android Studio.
 
 # Bug 23-4-2020
 There is a bug in this script which makes it function unexpectedly on machines having only one AVD. We are currently working on this fix, it will be updated soon. Meanwhile, if there are two or more AVD's, this script will work like a charm. We would be happy if you can help us on this issue. 
